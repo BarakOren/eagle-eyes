@@ -4,8 +4,10 @@ import styled, {createGlobalStyle} from "styled-components"
 import TopNav from './Components/TopNav';
 import Header from './Components/Header/Header';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import TripPage from './Pages/HomePage/Trip/TripPage';
 import BottomNav from './Components/BottomNav';
+import TripPage from "./Pages/Trip/TripPage"
+import CardsPage from './Pages/CardsPage/CardsPage';
+import ContactUs from "./Pages/ContactUs"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -45,6 +47,9 @@ function App() {
     <ParallaxProvider>
     <Routes>
     <Route path="/" element={<Homepage />} />
+    <Route exact path="/gallery" element={<div>hello</div>} />
+    <Route exact path="/contact-us" element={<ContactUs />} />
+    <Route path="/:cardspage" element={<CardsPage />} />
     <Route path="/tour/:tour" element={<TripPage />} />
     </Routes>
     <BottomNav />

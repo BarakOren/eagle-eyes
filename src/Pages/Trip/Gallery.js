@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import one from "../../../images/gallery/045-300x200.jpg"
-import two from "../../../images/gallery/048-300x200.jpg"
-import three from "../../../images/gallery/054-300x200.jpg"
-import four from "../../../images/gallery/056-300x200.jpg"
-import five from "../../../images/gallery/059-300x200.jpg"
+import one from "../../images/gallery/045-300x200.jpg"
+import two from "../../images/gallery/048-300x200.jpg"
+import three from "../../images/gallery/054-300x200.jpg"
+import four from "../../images/gallery/056-300x200.jpg"
+import five from "../../images/gallery/059-300x200.jpg"
 
 
 const Container = styled.div`

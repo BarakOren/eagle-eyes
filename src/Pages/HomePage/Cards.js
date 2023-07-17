@@ -15,7 +15,7 @@ const Title = styled.h2`
     text-align: center; 
     font-size: 88px;
     color: #272053;
-    margin: 50px 0 30px 0;
+
 `
 
 const CardsRow = styled.div`
@@ -31,7 +31,7 @@ const CardsRow = styled.div`
 `
 
 const CardsContainer = styled.div`
-    max-width: 90%;
+    width: 90%;
     overflow-x: scroll;
     height: 100%;
     display: flex;
@@ -52,10 +52,47 @@ const CardsContainer = styled.div`
 
 `
 
+const RowTitleContainer = styled.div`
+    margin: 50px 30px 30px 70px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`
+
 const RowTitle = styled.h2`
-    width: 100px;
-    font-size: 40px;
-    margin: 0 80px 0 50px;
+    width: 50%;
+    font-size: 52px;
+    font-family: 'BioRhyme', serif;
+    color: white;
+    line-height: 38px;
+    letter-spacing: 10px;
+    color: #272053;
+    cursor: default;
+    text-align: left;
+    margin: 0 0 20px 0;
+`
+
+
+
+const Span = styled.span`
+    margin: 0 0px 0 0;
+    color: #FFDE9F;
+    display:inline-block;
+    font-family: 'Shrikhand', cursive;
+    -webkit-transform:scale(1,1.3); /* Safari and Chrome */
+    -moz-transform:scale(1,1.3); /* Firefox */
+    -ms-transform:scale(1,1.3); /* IE 9 */
+    -o-transform:scale(1,1.3); /* Opera */
+    transform:scale(1,1.3); /* W3C */    
+`
+
+const Description = styled.p`
+    font-size: 16px;
+    width: 50%;
+    color:#272053;
+    text-align: left;
 `
 
 const Cards = () => {
@@ -87,7 +124,10 @@ const Cards = () => {
 
     return <Container>
     <CardsRow background='white' >
-        <RowTitle>Dubai Safari Deals</RowTitle>
+    <RowTitleContainer>
+    <RowTitle>Dubai <Span>Safari</Span> Deals</RowTitle>
+    <Description>Choose one of our recommended dubai desert tours.</Description>
+    </RowTitleContainer>
         <CardsContainer  ref={scrollRef}>
         {CardsData.map((card) => {
             return <Card 
@@ -99,7 +139,10 @@ const Cards = () => {
     </CardsRow>
 
     <CardsRow background='#F3F3F3' style={{paddingTop: '30px'}}>
-        <RowTitle>Dubai Safari Deals</RowTitle>
+    <RowTitleContainer>
+    <RowTitle>Quads<Span>Bike</Span> Deals</RowTitle>
+    <Description>All the quad-bikes and RZR options in the dubai desert.</Description>
+    </RowTitleContainer>
         <CardsContainer ref={scrollRefTwo}>
         {QuadCardsData.map((card) => {
             return <Card 

@@ -67,6 +67,11 @@ const Text = styled.p`
 const SVG = styled.img`
     width: 80px;
     height: auto;
+    transition: .2s all;
+
+    &:hover {
+        transform: rotateX(10deg) rotateY(-10deg) translate(-10%, -10%);
+    }
 `
 
 const WhoAreWe = () => {

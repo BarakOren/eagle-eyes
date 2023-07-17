@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import ticket from "../../../Assets/tickets.svg"
 
 const Container = styled.div`
     margin-top: 30px;
@@ -69,8 +68,6 @@ const Reservation = ({name}) => {
         
         <InstantText>For instant booking confirmation please send the following details in WhatsApp</InstantText>
         
-        <CallOrWhatsapp backgroundColor={'rgba(37,211,102, 0.8)'} href="https://wa.me/+971556414935?text=" target="_blank">WhatsApp +971 55 641 4935</CallOrWhatsapp>
-        <CallOrWhatsapp backgroundColor={'rgba(52, 183, 241, 0.8)'} href="tel:+97155641 4935" target="_blank">Call +971 55 641 4935</CallOrWhatsapp>
         <List>
             <Item>Name</Item>
             <Item>Tour - {name}</Item>
@@ -80,6 +77,9 @@ const Reservation = ({name}) => {
             <Item>Date Of Tour</Item>
             <Item>Contact Number</Item>
         </List>
+
+        <CallOrWhatsapp backgroundColor={'rgba(37,211,102, 0.8)'} href="https://wa.me/+971556414935?text=" target="_blank">WhatsApp +971 55 641 4935</CallOrWhatsapp>
+        <CallOrWhatsapp backgroundColor={'rgba(52, 183, 241, 0.8)'} href="tel:+97155641 4935" target="_blank">Call +971 55 641 4935</CallOrWhatsapp>
 
     </Container>
 }

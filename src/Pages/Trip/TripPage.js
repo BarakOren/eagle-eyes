@@ -1,32 +1,34 @@
 import styled from "styled-components"
 import { useLocation } from "react-router-dom"
-import {totalData} from "../../../data"
+import {totalData} from "../../data"
 import Pickup from "./Pickup"
 import TourIncludes from "./TourInculdes"
 import Gallery from "./Gallery"
 import Reservation from "./Reservation"
 
-import SelfDriveSafari from "../../../images/self-drive-safari.jpg"
-import DesertSafariBus from "../../../images/desert-safari-bus.jpg"
-import EveningDesertSafari from "../../../images/evening-desert-safari.jpg"
-import VIPDesertSafari from "../../../images/vip-desert-safari.jpg"
-import PrivateDesertSafari from "../../../images/private-desert-safari.jpg"
-import DesertSafariQuadBike from "../../../images/desert-safari-quad-bike.jpg"
-import MorningDesertSafari from "../../../images/morning-desert-safari.jpg"
-import OvernightDesertSafari from "../../../images/overnight-desert-safari.jpg"
-import DuneBuggy from "../../../images/dune-buggy.jpg"
+import Faqs from "../../Components/faqs/faqs"
 
-import QuadBikeSingle from "../../../images/quad-bike-1.jpg"
-import QuadBikeSingle1Hour from "../../../images/quad-bike-2.jpg"
-import QuadBikeDouble from "../../../images/quad-bike-3.jpg"
-import RZR1SeaterBuggy from "../../../images/Rzr-2-seater-buggy.jpg"
-import RZR2SeaterBuggy from "../../../images/dune-buggy.jpg"
-import RZR4SeaterBuggy from "../../../images/rzr-3-seater-buggy.jpg"
+import SelfDriveSafari from "../../images/self-drive-safari.jpg"
+import DesertSafariBus from "../../images/desert-safari-bus.jpg"
+import EveningDesertSafari from "../../images/evening-desert-safari.jpg"
+import VIPDesertSafari from "../../images/vip-desert-safari.jpg"
+import PrivateDesertSafari from "../../images/private-desert-safari.jpg"
+import DesertSafariQuadBike from "../../images/desert-safari-quad-bike.jpg"
+import MorningDesertSafari from "../../images/morning-desert-safari.jpg"
+import OvernightDesertSafari from "../../images/overnight-desert-safari.jpg"
+import DuneBuggy from "../../images/dune-buggy.jpg"
 
-import Background1 from "../../../images/tour-page-background-1.jpg"
-import Background2 from "../../../images/tour-page-background-2.jpg"
-import Background3 from "../../../images/tour-page-background-3.jpg"
-import Background4 from "../../../images/tour-page-background-4.jpg"
+import QuadBikeSingle from "../../images/quad-bike-1.jpg"
+import QuadBikeSingle1Hour from "../../images/quad-bike-2.jpg"
+import QuadBikeDouble from "../../images/quad-bike-3.jpg"
+import RZR1SeaterBuggy from "../../images/Rzr-2-seater-buggy.jpg"
+import RZR2SeaterBuggy from "../../images/dune-buggy.jpg"
+import RZR4SeaterBuggy from "../../images/rzr-3-seater-buggy.jpg"
+
+import Background1 from "../../images/tour-page-background-1.jpg"
+import Background2 from "../../images/tour-page-background-2.jpg"
+import Background3 from "../../images/tour-page-background-3.jpg"
+import Background4 from "../../images/tour-page-background-4.jpg"
 
 const backgroundArr = [Background1, Background2, Background3, Background4]
 
@@ -99,6 +101,7 @@ const Text = styled.p`
 `
 
 
+
 const TripPage = () => {
 
     const location = useLocation().pathname
@@ -109,7 +112,7 @@ const TripPage = () => {
     const {name, url, price, image} = data
 
     return <Container>
-    <Image image={backgroundArr[(Math.floor(Math.random() * backgroundArr.length))]} />
+    <Image image={backgroundArr[(Math.floor(Math.random() * backgroundArr.length))]} alt="background image" />
     <Name>{name}</Name>
     
     <Content>
@@ -128,11 +131,17 @@ const TripPage = () => {
 
         <TourIncludes />
         <Reservation name={name} />
+
     </TextArea>
     
     <Gallery />
     
     </Content>
+
+
+    <div style={{width: '80%'}}>
+    <Faqs />
+    </div>
    
     </Container>
 }

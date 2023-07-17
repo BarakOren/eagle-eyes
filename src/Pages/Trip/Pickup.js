@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import jeep from "../../../Assets/jeep-svg.svg"
+import jeep from "../../Assets/jeep-svg.svg"
 
 const Container = styled.div`
     width: 100%;

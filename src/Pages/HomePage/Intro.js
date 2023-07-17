@@ -40,11 +40,6 @@ const H1 = styled.h1`
     letter-spacing: 10px;
     cursor: default;
     transition: .5s all ease-in-out;
-    
-    /* &:hover {
-        line-height: 80px;
-        letter-spacing: 12px;
-    } */
 `
 
 const Span = styled.span`
