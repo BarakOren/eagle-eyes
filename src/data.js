@@ -93,3 +93,5 @@ export const QuadCardsData = [
         image: 'RZR4SeaterBuggy'
     },
 ]
+
+export const totalData = [...CardsData, ...QuadCardsData]

@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import Card from "./Card"
 import {CardsData, QuadCardsData} from "../../data"
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -59,7 +60,6 @@ const RowTitle = styled.h2`
 
 const Cards = () => {
 
-    // <Title>Our Thrilling Deals</Title>
 
     function useHorizontalScroll() {
         const elRef = useRef();
@@ -67,7 +67,7 @@ const Cards = () => {
           const el = elRef.current;
           if (el) {
             const onWheel = e => {
-              if (e.deltaY == 0) return;
+              if (e.deltaY === 0) {return};
               e.preventDefault();
               el.scrollTo({
                 left: el.scrollLeft + e.deltaY,
@@ -83,11 +83,12 @@ const Cards = () => {
 
       const scrollRef = useHorizontalScroll();
       const scrollRefTwo = useHorizontalScroll();
+     
 
     return <Container>
     <CardsRow background='white' >
         <RowTitle>Dubai Safari Deals</RowTitle>
-        <CardsContainer ref={scrollRef}>
+        <CardsContainer  ref={scrollRef}>
         {CardsData.map((card) => {
             return <Card 
             key={card.name}

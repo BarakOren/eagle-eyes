@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import background from "../../Assets/whoarewebackground.jpg"
 import arrow from "../../Assets/rightarrow.svg"
+import { Link } from "react-router-dom"
+
 import SelfDriveSafari from "../../images/self-drive-safari.jpg"
 import DesertSafariBus from "../../images/desert-safari-bus.jpg"
 import EveningDesertSafari from "../../images/evening-desert-safari.jpg"
@@ -36,8 +37,9 @@ const images = {
     RZR4SeaterBuggy
   };
 
-const Container = styled.div`
-    min-width: 230px;
+const Container = styled(Link)`
+    min-width: 200px;
+    padding: 0 10px;
     height: 90%;
     border-radius: 16px;
     background-image: ${p => `url(${p.background})`};
@@ -74,9 +76,12 @@ const BlackScreen = styled.div`
     width: 100%;
     height: 100%;
     opacity: 1;
-    background-color: rgb(123, 81, 56, 0.1);
+    background-color: rgb(123, 81, 56, 0.4);
     border-radius: 16px;
     transition: .2s all;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     ${Container}:hover & {
         background-color: rgb(123, 81, 56, 0.7);
@@ -87,12 +92,13 @@ const BlackScreen = styled.div`
 const Title = styled.h3`
     font-size: 18px;
     position: absolute;
-    top: 10px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     width: 100%;
     padding: 6px 0;
+    margin: 0;
 `
 
 const Price = styled.p`
@@ -109,7 +115,7 @@ const Card = ({data}) => {
 
     const {name, url, price, image} = data
 
-    return <Container background={images[image]} >
+    return <Container to={`/tour/${url}`} onClick={() => window.scrollTo({ top: 0 })} background={images[image]} >
     <BlackScreen />
     <RightArrow src={arrow} alt="arrow" />
     <Title>{name}</Title>
