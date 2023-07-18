@@ -4,6 +4,7 @@ import WhoAreWe from "./WhoAreWe"
 import Cards from "./Cards"
 import Faqs from "../../Components/faqs/faqs"
 import TireMarkBackground from "../../Assets/tire-mark-background.jpg"
+import HereForYou from "./HereForYou"
 
 const Container = styled.div`
     width: 100%;
@@ -48,6 +49,7 @@ const Homepage = () => {
     </FaqInsideContainer>
     </FaqContainre>
     
+    <HereForYou />
     </Container>
 }
 

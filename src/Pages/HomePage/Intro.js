@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Image from "../../Assets/mainimage2.jpg"
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-
+import { Link } from "react-router-dom";
 
 
 
@@ -54,7 +54,8 @@ const Span = styled.span`
     transform:scale(1,1.3); /* W3C */    
 `
 
-const BookATour = styled.button`    
+const BookATour = styled(Link)`    
+    text-decoration: none;
     padding: 12px 32px;
     background-color: #272053;
     color: white;
@@ -93,7 +94,7 @@ const Intro = () => {
     <TextContainer>
     <Parallax disabled={width} opacity={[2, 0]} translateY={['-50px', '100px']} translateX={['0px', '-100px']}>
     <H1>DUBAI<br/><Span>SAFARI</Span><br/>DESERT</H1>
-    <BookATour>Book A Tour</BookATour>
+    <BookATour onClick={() => window.scrollTo({ top: 0 })} to="/contact-us">Book A Tour</BookATour>
     </Parallax>
     </TextContainer>
     </Container>

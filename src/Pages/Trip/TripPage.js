@@ -5,6 +5,7 @@ import Pickup from "./Pickup"
 import TourIncludes from "./TourInculdes"
 import Gallery from "./Gallery"
 import Reservation from "./Reservation"
+import HereForYou from "../HomePage/HereForYou"
 
 import Faqs from "../../Components/faqs/faqs"
 
@@ -57,7 +58,6 @@ const Container = styled.div`
     justify-content: flex-start;
     flex-direction: column;
     color: #272053;
-    padding-bottom: 50px;
 `
 
 const Image = styled.div`
@@ -136,12 +136,15 @@ const TripPage = () => {
     
     <Gallery />
     
+
     </Content>
 
 
-    <div style={{width: '80%'}}>
+    <div style={{width: '80%', marginBottom: '80px'}}>
     <Faqs />
     </div>
+
+    <HereForYou />
    
     </Container>
 }

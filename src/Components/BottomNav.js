@@ -7,16 +7,16 @@ import facebook from "../Assets/facebook.svg"
 
 const Container = styled.div`
     width: 90%;
-    padding: 30px 5%;
+    padding: 20px 5%;
     background-color: #795747;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
 `
 
 const Logo = styled.img`
-    width: 70%;
+    width: 50%;
     height: auto;
 `
 
@@ -32,7 +32,7 @@ const Column = styled.div`
 `
 
 const Row = styled.a`
-    width: 100%;
+    width: 40%;
     align-items: center;
     display: flex;
     text-decoration: none;
@@ -58,8 +58,18 @@ const A = styled.a`
 `
 
 const CopyRights = styled.p`
-    font-size: 16px;
+    font-size: 14px;
     color: white;
+`
+
+const LinksContainer = styled.div`
+    margin-left: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px 50px;
 `
 
 const BottomNav = () => {
@@ -71,8 +81,9 @@ const BottomNav = () => {
     <CopyRights>© Copyright 2022-23 | Eagle Eyes Tourism</CopyRights>
 
     </Column>
-    <Column style={{marginTop: '10px'}}>
-        <Row href="https://wa.me/+971556414935?text=" target="_blank">
+
+    <LinksContainer>
+    <Row href="https://wa.me/+971556414935?text=" target="_blank">
             <Icon src={whatsapp} alt="whatsapp icon" />
             <A>+971 55 641 4935</A>
         </Row>
@@ -88,7 +99,7 @@ const BottomNav = () => {
         <Icon src={facebook} alt="facebook icon" />
         <A>facebook</A>
     </Row>
-    </Column>
+    </LinksContainer>
 
     </Container>
 }

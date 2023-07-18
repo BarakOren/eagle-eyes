@@ -40,7 +40,7 @@ const InstantText = styled.p`
 `
 
 const CallOrWhatsapp = styled.a`
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     background-color: ${p => p.backgroundColor};
     padding: 6px 10px;

@@ -48,7 +48,7 @@ const Container = styled(Link)`
     cursor: pointer;
 
     &:hover {
-        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5)) ;
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3)) ;
     }
 
 

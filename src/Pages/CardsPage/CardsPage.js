@@ -6,6 +6,7 @@ import Background1 from "../../images/tour-page-background-1.jpg"
 import Background2 from "../../images/tour-page-background-2.jpg"
 import Background3 from "../../images/tour-page-background-3.jpg"
 import Background4 from "../../images/tour-page-background-4.jpg"
+import HereForYou from "../HomePage/HereForYou"
 
 const Container = styled.div`
     width: 100%;
@@ -14,7 +15,6 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 50px;
 `
 
 const Title = styled.h3`
@@ -42,11 +42,19 @@ const Image = styled.div`
 const CardsContainer = styled.div`
     padding-top: 50px;
     width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px 0;
-    flex-wrap: wrap;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    @media only screen and (max-width: 1000px){
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+
 `
 
 const CardsPage = () => {
@@ -66,6 +74,7 @@ const CardsPage = () => {
             return <Card key={card.name} data={card} />
         })}
         </CardsContainer>
+        <HereForYou />
     </Container>
 }
 

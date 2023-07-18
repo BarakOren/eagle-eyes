@@ -28,11 +28,7 @@ p, h1 {
 }
 
 ::-webkit-scrollbar-thumb{
-  background: rgb(39, 39, 39);
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background: rgb(68, 68, 68);
+  background-color: rgb(39, 32, 83);
 }
 
 `;
