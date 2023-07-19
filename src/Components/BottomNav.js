@@ -13,22 +13,39 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: center;
     position: relative;
+
+    
+    @media only screen and (max-width: 1100px) {
+        align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 741px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+    }
 `
 
 const Logo = styled.img`
     width: 50%;
     height: auto;
+
+    
 `
 
 const Column = styled.div`
     max-width: 300px;
-    height: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px 0;
     color: white;
+
+    @media only screen and (max-width: 1100px) {
+        align-items: center;
+    }
 `
 
 const Row = styled.a`
@@ -36,17 +53,31 @@ const Row = styled.a`
     align-items: center;
     display: flex;
     text-decoration: none;
+    @media only screen and (max-width: 1100px) {
+        widtH: auto;
+    }
+    @media only screen and (max-width: 1100px) {
+        width: 100%;
+        justify-content: center;
+    }
+
 `
 
 const Icon = styled.img`
     width: 26px;
     height: auto;
     margin-right: 12px;
+
+    @media only screen and (max-width: 1100px) {
+        width: 22px;
+    }
 `
 
 const P = styled.p`
     text-align: left;
     width: 80%;
+
+  
 `
 
 const A = styled.a`
@@ -55,6 +86,9 @@ const A = styled.a`
     color: white;
     letter-spacing: 1px;
     font-size: 14px;
+    @media only screen and (max-width: 1100px) {
+        font-size: 12px;
+    }
 `
 
 const CopyRights = styled.p`
@@ -70,6 +104,18 @@ const LinksContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px 50px;
+
+    @media only screen and (max-width: 1100px) {
+            justify-content: space-between;
+            flex-direction: column;
+            width: 30%;
+            margin-left: 0px;
+    }
+
+    @media only screen and (max-width: 741px) {
+        width: 100%;
+        justify-content: space-between;
+    }
 `
 
 const BottomNav = () => {
@@ -79,6 +125,7 @@ const BottomNav = () => {
     <Logo src={logo} alt="icon" />
 
     <CopyRights>© Copyright 2022-23 | Eagle Eyes Tourism</CopyRights>
+    <CopyRights>Developer By - Barak Oren</CopyRights>
 
     </Column>
 

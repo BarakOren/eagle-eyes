@@ -15,7 +15,29 @@ const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    overflow: visible;
+
+    @media only screen and (max-width: 1100px) {
+        background-size: 120%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        background-size: 130%;
+    }
+
+    
+    @media only screen and (max-width: 800px) {
+        background-size: 150%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        background-size: 150%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        background-size: 268%;
+        background-position: 99% 38%;
+        opacity: 1;
+    }
 `
 
 
@@ -28,7 +50,21 @@ const TextContainer = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 1000px;
+    @media only screen and (max-width: 900px) {
+        left: 100px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        left: 90px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        left: 59%;
+        top: 46%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
 `
 
 const H1 = styled.h1`
@@ -39,7 +75,26 @@ const H1 = styled.h1`
     line-height: 70px;
     letter-spacing: 10px;
     cursor: default;
-    transition: .5s all ease-in-out;
+
+
+    @media only screen and (max-width: 1100px) {
+        font-size: 90px;
+        line-height: 60px;
+    }
+    @media only screen and (max-width: 900px) {
+        font-size: 80px;
+        line-height: 50px;
+    }
+    @media only screen and (max-width: 800px) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        text-shadow: 0 0 10px #000;
+    -moz-text-shadow: 0 0 2px #000;
+    -webkit-text-shadow: 0 0 2px #000;
+    }
 `
 
 const Span = styled.span`
@@ -85,6 +140,14 @@ const PaperCut = styled.div`
     background-image: url(${BagePaperCut});
     z-index: 10;
     background-size: cover;
+
+    @media only screen and (max-width: 800px) {
+        width: 200%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 300%;
+    }
 `
 
 // <ParallaxBanner

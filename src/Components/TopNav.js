@@ -12,6 +12,10 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 const WhatsAppContainer = styled.a`

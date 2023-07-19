@@ -28,6 +28,10 @@ const Background = styled.div`
     background-image: url(${background});
     background-size: cover;
     z-index: -1;
+
+    @media only screen and (max-width: 770px) {
+        background-position: 50% 0%;
+    }
 `
 
 const Title = styled.h2`
@@ -35,11 +39,39 @@ const Title = styled.h2`
     text-align: center;
     font-size: 100px;
     margin: 60px 0 20px 0;
+
+    @media only screen and (max-width: 1100px) {
+        font-size: 90px;
+    }
+
+    @media only screen and (max-width: 770px) {
+        font-size: 80px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 420px) {
+        font-size: 50px;
+    }
+
+    @media only screen and (max-width: 350px) {
+        font-size: 42px;
+    }
 `
 
 const P = styled.p`
     width: 70%;
     font-size: 18px;
+
+    @media only screen and (max-width: 770px) {
+        font-size: 16px;
+    }
+
+    @media only screen and (max-width: 350px) {
+        font-size: 14px;
+    }
 `
 
 const LogosContainer = styled.div`
@@ -56,12 +88,22 @@ const LogoAndText = styled.div`
 
     &:hover {
         filter: drop-shadow(10px 10px 30px #272053) ;
-
     }
+
 `
 
 const Text = styled.p`
     margin: 10px 0 0 0;
+    
+    @media only screen and (max-width: 650px) {
+        font-size: 16px;
+    }
+
+    @media only screen and (max-width: 560px) {
+        font-size: 14px;
+    }
+
+
 `
 
 const SVG = styled.img`
@@ -71,6 +113,15 @@ const SVG = styled.img`
 
     &:hover {
         transform: rotateX(10deg) rotateY(-10deg) translate(-10%, -10%);
+    }
+
+    
+    @media only screen and (max-width: 770px) {
+        width: 60px;
+    }
+
+    @media only screen and (max-width: 650px) {
+        width: 50px;
     }
 `
 

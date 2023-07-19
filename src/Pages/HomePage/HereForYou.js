@@ -11,6 +11,12 @@ const Container = styled.div`
     align-items: center;
     gap: 20px 0;
     position: relative;
+
+    @media only screen and (max-width: 471px) {
+        height: 100vh;
+    }
+
+   
 `
 
 const Background = styled.div`
@@ -41,10 +47,36 @@ const Title = styled.h5`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    @media only screen and (max-width: 900px) {
+        font-size: 52px;
+        span {
+            font-size: 62px;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        width: 80%;
+        margin: 20px 0px 40px 0;
+    }
+
+    @media only screen and (max-width: 471px) {
+        width: 90%;
+        margin: 0 0 100px 0;
+    }
+ 
 `
 
 const Text = styled.p`
     font-size: 22px;
+    color: rgb(39, 32, 83);
+
+    @media only screen and (max-width: 900px) {
+        font-size: 18px;
+    }
+    @media only screen and (max-width: 600px) {
+        width: 90%;
+    }
 `
 
 
@@ -68,6 +100,11 @@ const BookATour = styled(Link)`
     &:active {
         transform:scale(0.98);
     }
+
+    @media only screen and (max-width: 750px) {
+        font-size: 16px;
+    }
+   
 `
 
 const HereForYou = () => {

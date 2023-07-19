@@ -51,6 +51,32 @@ const Container = styled(Link)`
         filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3)) ;
     }
 
+    @media only screen and (max-width: 650px) {
+        width: 220px;
+        height: 300px;
+        min-width: unset;
+    }
+
+    @media only screen and (max-width: 570px) {
+        width: 200px;
+        height: 260px;
+    }
+
+    @media only screen and (max-width:470px) {
+        width: 180px;
+        height: 240px;
+    }
+
+    @media only screen and (max-width:440px) {
+        width: 160px;
+        height: 240px;
+    }
+
+    
+    @media only screen and (max-width:400px) {
+        width: 140px;
+        height: 220px;
+    }
 
 `
 
@@ -70,6 +96,10 @@ const RightArrow = styled.img`
         opacity: 1; 
   }
 
+  @media only screen and (max-width: 420px) {
+        display: none;
+    }
+
 `
 
 const BlackScreen = styled.div`
@@ -86,6 +116,10 @@ const BlackScreen = styled.div`
     ${Container}:hover & {
         background-color: rgb(123, 81, 56, 0.7);
   }
+
+  @media only screen and (max-width: 650px) {
+    background-color: rgb(123, 81, 56, 0.6);
+    }
 
 `
 

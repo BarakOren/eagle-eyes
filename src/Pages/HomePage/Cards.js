@@ -8,6 +8,8 @@ const Container = styled.div`
     width: 100%;
     min-height: 100vh;
     background-color: white;
+
+
 `
 
 const Title = styled.h2`
@@ -29,6 +31,11 @@ const CardsRow = styled.div`
     gap: 0 20px;
     background-color: ${p => p.background};
     position: relative;
+
+    @media only screen and (max-width: 650px) {
+        flex-direction: column;
+        height: auto;
+    }
 `
 
 const CardsContainer = styled.div`
@@ -51,6 +58,20 @@ const CardsContainer = styled.div`
         background-color: rgb(39, 32, 83);
     }
 
+    @media only screen and (max-width: 650px) {
+        width: 100%;
+        display: grid;
+        gap: unset;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(repeat, 1fr);
+        /* grid-column-gap: 30px; */
+        grid-row-gap: 30px;
+        justify-content: space-evenly;
+    }
+
+    @media only screen and (max-width: 570px) {
+        grid-template-columns: repeat(2, auto);
+    }
 `
 
 
@@ -74,6 +95,17 @@ const RowTitleContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media only screen and (max-width: 850px) {
+        margin: 50px 40px 30px 5px;
+    }
+
+    @media only screen and (max-width: 650px) {
+        margin: 0;
+        text-align: center;
+    }
+
+
 `
 
 const RowTitle = styled.h2`
@@ -87,6 +119,14 @@ const RowTitle = styled.h2`
     cursor: default;
     text-align: left;
     margin: 0 0 20px 0;
+
+    @media only screen and (max-width: 650px) {
+        margin: 0 0 10px 0;
+        text-align: center;
+        width: 90%;
+        font-size: 80px;
+        line-height: 52px;
+    }
 `
 
 
@@ -108,14 +148,28 @@ const Description = styled.p`
     width: 50%;
     color:#272053;
     text-align: left;
+
+    @media only screen and (max-width: 650px) {
+        margin: 12px 0 20px 0;
+        text-align: center;
+        width: 90%;
+        font-size: 22px;
+        margin-right: -10px;
+    }
+
+    @media only screen and (max-width: 420px) {
+        font-size: 20px;
+    }
 `
 
 const Cards = () => {
-
+    
+    const width = window.innerWidth;
 
     function useHorizontalScroll() {
         const elRef = useRef();
         useEffect(() => {
+            if(width < 651){return;}
           const el = elRef.current;
           if (el) {
             const onWheel = e => {

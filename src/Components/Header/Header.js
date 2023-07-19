@@ -13,6 +13,9 @@ const Container = styled.header`
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px rgba(255,255,255, 0.5) solid;
+    @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 const LogoImage = styled.img`

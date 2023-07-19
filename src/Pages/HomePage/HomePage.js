@@ -17,6 +17,19 @@ const FaqContainre = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
+    @media only screen and (max-width: 900px) {
+        height: 120vh;
+    }
+    @media only screen and (max-width: 620px) {
+        height: 130vh;
+    }
+    @media only screen and (max-width: 580px) {
+        height: 150vh;
+    }
+    @media only screen and (max-width: 470px) {
+        display: none;
+    }
 `
 
 const FaqBackground = styled.div`

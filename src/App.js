@@ -9,7 +9,10 @@ import TripPage from "./Pages/Trip/TripPage"
 import CardsPage from './Pages/CardsPage/CardsPage';
 import ContactUs from "./Pages/ContactUs"
 import GalleryPage from './Pages/Gallery/GalleryPage';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import Hamburger from './Components/Menu/Hamburger';
+import Menu from './Components/Menu/Menu';
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -40,11 +43,15 @@ function App() {
 
   const bodyref = useRef(null)
 
+  const [menuToggle, setMenuToggle] = useState(false)
+
   return (
     <>
     <GlobalStyle />
     <TopNav />
     <Header />
+    <Menu menuToggle={menuToggle} setMenuToggle={setMenuToggle} />
+    <Hamburger menuToggle={menuToggle} setMenuToggle={setMenuToggle} />
     <ParallaxProvider>
     <Routes>
     <Route path="/" element={<Homepage />} />
