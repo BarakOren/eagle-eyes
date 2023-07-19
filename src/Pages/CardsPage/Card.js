@@ -51,6 +51,26 @@ const Container = styled(Link)`
         filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5)) ;
     }
 
+    
+    @media only screen and (max-width: 890px){
+        width: 180px;
+        height: 280px;
+    }
+
+    @media only screen and (max-width: 761px){
+        width: 200px;
+        height: 300px;
+    }
+
+    @media only screen and (max-width: 561px){
+        width: 160px;
+        height: 260px;
+    }
+    @media only screen and (max-width: 480px){
+        width: 120px;
+        height: 220px;
+    }
+
 
 `
 
@@ -99,6 +119,11 @@ const Title = styled.h3`
     width: 100%;
     padding: 6px 0;
     margin: 0;
+
+    @media only screen and (max-width: 480px){
+    top: 20px;
+        font-size: 16px;
+    }
 `
 
 const Price = styled.p`
@@ -107,6 +132,11 @@ const Price = styled.p`
     left: 3px;
     padding: 6px;
     color: white;
+
+    @media only screen and (max-width: 480px){
+        bottom:10px;
+        font-size: 14px;
+    }
 `
 
 

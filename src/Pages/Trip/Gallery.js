@@ -12,6 +12,11 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
     border: 1px solid black;
+
+    @media only screen and (max-width: 500px){
+        width: 90%;
+        border: none;
+    }
 `
 
 const Image = styled.img`

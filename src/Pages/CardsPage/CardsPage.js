@@ -23,6 +23,22 @@ const Title = styled.h3`
     font-size: 88px;
     color:rgb(39, 32, 83);
     margin: 20px 0;
+
+    @media only screen and (max-width: 900px){
+        font-size: 78px;
+    }
+    @media only screen and (max-width: 600px){
+        font-size: 78px;
+        margin-bottom: 100px;
+    }
+
+    @media only screen and (max-width: 500px){
+        font-size: 60px;
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 390px){
+        font-size: 42px;
+    }
 `
 
 
@@ -37,6 +53,10 @@ const Image = styled.div`
     left: 0;
     z-index: -1;
     opacity: 0.8;
+
+    @media only screen and (max-width: 500px){
+        height: 250px;
+}
 `
 
 const CardsContainer = styled.div`
@@ -49,9 +69,16 @@ const CardsContainer = styled.div`
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 
-    @media only screen and (max-width: 1000px){
+    @media only screen and (max-width: 1100px){
+        justify-items: center;
         grid-column-gap: 20px;
         grid-row-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: 761px){
+  
+        grid-template-columns: repeat(2,  1fr);
     }
 
 

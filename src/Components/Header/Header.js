@@ -31,6 +31,10 @@ const LinksContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media only screen and (max-width: 1000px) {
+        width: 70%;
+  }
 `
 
 const Header = () => {

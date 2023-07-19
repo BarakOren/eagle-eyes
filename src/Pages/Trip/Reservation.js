@@ -9,6 +9,10 @@ const Container = styled.div`
     justify-content: center;
     text-align: left;
     position: relative;
+
+    @media only screen and (max-width: 500px){
+        margin-bottom: 30px;
+    }
 `
 
 const Title = styled.h5`
@@ -48,6 +52,10 @@ const CallOrWhatsapp = styled.a`
     border-radius: 6px;
     color: white;
     margin: 6px 0;
+
+    @media only screen and (max-width: 500px){
+        align-self: center;
+    }
 `
 
 const TicketSVG = styled.img`

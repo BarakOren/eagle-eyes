@@ -2,8 +2,7 @@ import styled from "styled-components"
 import background from "../Assets/contactus-page-background.jpg"
 import whatsapp from "../Assets/whatsapp.svg"
 import phone from "../Assets/phone.svg"
-import email from "../Assets/email.svg"
-import facebook from "../Assets/facebook.svg"
+
 
 
 const Container = styled.div`
@@ -28,6 +27,11 @@ const Background = styled.div`
     background-size: cover;
     z-index: -1;
     opacity: 0.3;
+
+    
+    @media only screen and (max-width: 700px){
+        background-position: center;
+    }
 `
 
 const Title = styled.h2`
@@ -36,11 +40,19 @@ const Title = styled.h2`
     font-size: 100px;
     margin: 0;
     padding-top: 100px;
+
+    @media only screen and (max-width: 620px){
+        font-size: 80px;
+    }
 `
 
 const Text = styled.p`
     font-size: 18px;
     margin-top: 50px;
+
+    @media only screen and (max-width: 620px){
+        font-size: 16px;
+    }
 `
 
 const LinksContainer = styled.div`
@@ -50,6 +62,20 @@ const LinksContainer = styled.div`
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 70px;
+
+    @media only screen and (max-width: 1096px){
+        width: 70%;
+    }
+
+    @media only screen and (max-width: 725px){
+        width: 90%;
+    }
+
+    @media only screen and (max-width: 570px){
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 20px 0;
+    }
 `
 
 const Row = styled.a`
@@ -59,6 +85,8 @@ const Row = styled.a`
     background-color: #272053;
     padding: 12px 22px;
     border-radius: 12px;
+
+ 
 `
 
 const P = styled.p`
@@ -67,12 +95,20 @@ const P = styled.p`
     color: white;
     letter-spacing: 1px;
     font-size: 20px;
+
+    @media only screen and (max-width: 800px){
+        font-size: 18px;
+    }
 `
 
 const Icon = styled.img`
     width: 32px;
     height: auto;
     margin-right: 12px;
+
+    @media only screen and (max-width: 800px){
+        width: 30px;
+    }
 `
 
 

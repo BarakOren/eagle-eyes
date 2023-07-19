@@ -10,7 +10,7 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: 100;
     display: ${p => p.display ? 'block' : 'none'};
 `
 
@@ -27,6 +27,11 @@ const Image = styled.img`
     width: 50%;
     height: auto;
     margin: 0 10vw;
+
+    @media only screen and (max-width: 500px){
+        width: 70%;
+        margin: 0 10px;
+    }
 `
 
 const Arrow = styled.img`
@@ -34,6 +39,10 @@ const Arrow = styled.img`
     height: auto;
     cursor: pointer;
     opacity: ${p => p.opacity ? '0.3' : '1'};
+
+    @media only screen and (max-width: 500px){
+        width: 30px;
+    }
 `
 
 const Count = styled.p`

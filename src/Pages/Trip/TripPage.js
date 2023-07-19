@@ -71,11 +71,25 @@ const Image = styled.div`
     left: 0;
     z-index: -1;
     opacity: 0.8;
+
+    @media only screen and (max-width: 500px){
+        height: 250px;
+}
 `
 
 const Name = styled.h2`
     margin-top: 110px;
     font-size: 88px;
+
+    @media only screen and (max-width: 1100px){
+        font-size: 60px;
+        margin-bottom: 100px;
+    }
+
+    @media only screen and (max-width: 850px){
+        font-size: 50px;
+        margin-bottom: 100px;
+    }
 `
 
 const Content = styled.div`
@@ -83,6 +97,11 @@ const Content = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
+
+    @media only screen and (max-width: 500px){
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const TextArea = styled.div`
@@ -93,11 +112,23 @@ const TextArea = styled.div`
     justify-content: flex-start;
     flex-direction: column;
 
+    @media only screen and (max-width: 500px){
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+    }
+
 `
 
 const Text = styled.p`
     margin-top: 30px;
     text-align: left;
+
+    @media only screen and (max-width: 500px){
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+    }
 `
 
 
@@ -108,8 +139,7 @@ const TripPage = () => {
     const withoutSlash = location.substring(6)
     const data = totalData.find(tour => tour.url === withoutSlash)
     
-
-    const {name, url, price, image} = data
+    const {name, price, info} = data
 
     return <Container>
     <Image image={backgroundArr[(Math.floor(Math.random() * backgroundArr.length))]} alt="background image" />
@@ -119,15 +149,7 @@ const TripPage = () => {
 
     <TextArea>
         <Pickup pickup={true} price={price} />
-        <Text>Gave read use way make spot how nor. In daughter goodness an likewise oh consider at procured wandered. Songs words wrong by me hills heard timed. Happy eat may doors songs. Be ignorant so of suitable dissuade weddings together. Least whole timed we is. An smallness deficient discourse do newspaper be an eagerness continued. Mr my ready guest ye after short at.
-        <br />
-        <br />
-        Looking started he up perhaps against. How remainder all additions get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye. Families blessing he in to no daughter.
-        <br />
-        <br />
-
-        Folly was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh. Most have love my gone to this so. Discovered interested prosperous the our affronting insipidity day. Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret passed. Absolute one hastened mrs any sensible.
-        </Text>
+        <Text>{info}</Text>
 
         <TourIncludes />
         <Reservation name={name} />

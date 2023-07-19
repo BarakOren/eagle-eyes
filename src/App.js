@@ -38,6 +38,20 @@ p, h1 {
 
 `;
 
+const EagleEyeTourism = styled.p`
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 16px;
+    color: white;
+    z-index: 1;
+
+    
+    @media only screen and (min-width: 600px){
+        display: none;
+}
+`
+
 
 function App() {
 
@@ -48,6 +62,7 @@ function App() {
   return (
     <>
     <GlobalStyle />
+    <EagleEyeTourism>Eagle Eye Tourism</EagleEyeTourism>
     <TopNav />
     <Header />
     <Menu menuToggle={menuToggle} setMenuToggle={setMenuToggle} />

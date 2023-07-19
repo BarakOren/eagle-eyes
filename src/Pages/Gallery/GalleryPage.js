@@ -79,6 +79,22 @@ const Container = styled.div`
 const Title = styled.h2`
     margin-top: 110px;
     font-size: 88px;
+
+    @media only screen and (max-width: 900px){
+        font-size: 78px;
+    }
+    @media only screen and (max-width: 600px){
+        font-size: 78px;
+        margin-bottom: 100px;
+    }
+
+    @media only screen and (max-width: 500px){
+        font-size: 60px;
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 350px){
+        font-size: 42px;
+    }
 `
 
 const ImagesContainer = styled.div`
@@ -90,6 +106,15 @@ const ImagesContainer = styled.div`
     grid-template-rows: repeat(repeat, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    justify-items: center;
+
+    @media only screen and (max-width: 1100px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 500px){
+        grid-template-columns: repeat(1, 1fr);
+    }
     
 `
 
@@ -100,6 +125,23 @@ const Image = styled.div`
     background-position: center;
     background-size: cover;
     cursor: pointer;
+
+    @media only screen and (max-width: 700px){
+        width: 250px;
+        height: 150px;
+    }
+
+    
+    @media only screen and (max-width: 600px){
+        width: 200px;
+        height: 100px;
+    }
+
+    @media only screen and (max-width: 500px){
+        width: 300px;
+        height: 250px;
+    }
+ 
 `
 
 const BackgroundImage = styled.div`
@@ -114,6 +156,16 @@ const BackgroundImage = styled.div`
     left: 0;
     z-index: -1;
     opacity: 0.6;
+
+ 
+    @media only screen and (max-width: 600px){
+        background-position: center;
+    }
+
+    @media only screen and (max-width: 500px){
+        height: 250px;
+    }
+
 `
 
 
