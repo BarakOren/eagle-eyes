@@ -8,6 +8,7 @@ import BottomNav from './Components/BottomNav';
 import TripPage from "./Pages/Trip/TripPage"
 import CardsPage from './Pages/CardsPage/CardsPage';
 import ContactUs from "./Pages/ContactUs"
+import GalleryPage from './Pages/Gallery/GalleryPage';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -43,7 +44,7 @@ function App() {
     <ParallaxProvider>
     <Routes>
     <Route path="/" element={<Homepage />} />
-    <Route exact path="/gallery" element={<div>hello</div>} />
+    <Route exact path="/gallery" element={<GalleryPage />} />
     <Route exact path="/contact-us" element={<ContactUs />} />
     <Route path="/:cardspage" element={<CardsPage />} />
     <Route path="/tour/:tour" element={<TripPage />} />
