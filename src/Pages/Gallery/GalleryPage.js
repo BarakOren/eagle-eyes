@@ -1,5 +1,10 @@
 import styled from "styled-components"
 import Carousel from "./Carousel"
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { useState, useEffect} from "react"
+import background from "../../Assets/carousel-background-image.jpeg"
+import HereForYou from "../HomePage/HereForYou"
+
 import image1 from "../../images/gallerypage/001.jpg"
 import image2 from "../../images/gallerypage/004.jpg"
 import image3 from "../../images/gallerypage/005-Correction.jpg"
@@ -53,12 +58,13 @@ const images = [
     image20,
     image21,
     image22,
+    image23,
     image24,
     image25,
     image26,
     image27,
     image28,
-    image29,
+    image29
 ]
 
 const Container = styled.div`
@@ -68,7 +74,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 70px;
 `
 
 const Title = styled.h2`
@@ -77,34 +82,71 @@ const Title = styled.h2`
 `
 
 const ImagesContainer = styled.div`
+    margin-top: 30px;
+    margin-bottom: 50px;
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(repeat, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     
 `
 
 const Image = styled.div`
-    width: 200px;
+    width: 300px;
     height: 200px;
     background-image: ${p => `url(${p.image})`};
     background-position: center;
     background-size: cover;
+    cursor: pointer;
+`
+
+const BackgroundImage = styled.div`
+    width: 100%;
+    height: 300px;
+    background-image: ${p => `url(${background})`};
+    background-size: cover;
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
 `
 
 
-const GalleryPage = () => {
+const GalleryPage = ({bodyref}) => {
+
+    const [num, setNum] = useState(-1)
+// disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks
+
+    useEffect(() => {
+        if(num >= 0){disableBodyScroll(bodyref); return}
+        else if(num === -1) {enableBodyScroll(bodyref); return}
+        return () => {clearAllBodyScrollLocks(bodyref)}
+    }, [num])
+
+    const handleClick = (i) => {
+        setNum(i)
+    }
+
+    console.log(num)
 
     return <Container>
+    <BackgroundImage />
         <Title>Our Guests</Title>
         <ImagesContainer>
             {images.map((image, i) => {
-                return <Image image={image} key={i} />
+                return <Image 
+                onClick={() => handleClick(i)}
+                image={image} key={i} />
             })}
         </ImagesContainer>
-        <Carousel />
+        <Carousel num={num} setNum={setNum} images={images} />
+
+        <HereForYou />
     </Container>
 } 
 
