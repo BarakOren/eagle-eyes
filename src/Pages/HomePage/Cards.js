@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import Card from "./Card"
 import {CardsData, QuadCardsData} from "../../data"
-import { useRef, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useRef, useEffect } from "react";
+import papercut from "../../Assets/whitepapercut.png"
 
 const Container = styled.div`
     width: 100%;
@@ -28,6 +28,7 @@ const CardsRow = styled.div`
     justify-content: flex-start;
     gap: 0 20px;
     background-color: ${p => p.background};
+    position: relative;
 `
 
 const CardsContainer = styled.div`
@@ -51,6 +52,20 @@ const CardsContainer = styled.div`
     }
 
 `
+
+
+const PaperCut = styled.div`
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    background-image: url(${papercut});
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+`
+
 
 const RowTitleContainer = styled.div`
     margin: 50px 30px 30px 70px;
@@ -135,6 +150,7 @@ const Cards = () => {
             data={card}
             />
         })}
+        <PaperCut />
         </CardsContainer>
     </CardsRow>
 

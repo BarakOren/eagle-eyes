@@ -1,23 +1,23 @@
 import styled from "styled-components"
-import Image from "../../Assets/mainimage2.jpg"
+import Image from "../../Assets/mainimage22.jpg"
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import { Link } from "react-router-dom";
-
-
-
+import BagePaperCut from "../../Assets/bagepapercut.png"
 
 
 const Container = styled.div`
     width: 100%;
     color: black;
     height: calc(100vh - 40px);
-    /* background-image: url(${Image}); */
+    background-image: url(${Image});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    overflow: visible;
 `
+
 
 const TextContainer = styled.div`
     position: absolute;
@@ -76,23 +76,42 @@ const BookATour = styled(Link)`
     }
 `
 
+
+const PaperCut = styled.div`
+    width: 100%;
+    height: 30px;
+    bottom: -11px;
+    position: absolute;
+    background-image: url(${BagePaperCut});
+    z-index: 10;
+    background-size: cover;
+`
+
+// <ParallaxBanner
+// layers={[
+//     {
+//     image: Image,
+//     speed: -20,
+    
+//     },
+// ]}
+// style={{ aspectRatio: '2 / 1' }}
+// />
+
 const Intro = () => {
 
     const width = window.innerWidth < 420
 
     return <Container>
-    <ParallaxBanner
-    layers={[
-        {
-        image: Image,
-        speed: -20,
-        
-        },
-    ]}
-    style={{ aspectRatio: '2 / 1' }}
-    />
+    <PaperCut />
     <TextContainer>
-    <Parallax disabled={width} opacity={[2, 0]} translateY={['-50px', '100px']} translateX={['0px', '-100px']}>
+    <Parallax 
+    disabled={width} 
+    opacity={[2, 0]} 
+    // translateY={['-50px', '100px']} 
+    translateX={['0px', '-100px']}
+    
+    >
     <H1>DUBAI<br/><Span>SAFARI</Span><br/>DESERT</H1>
     <BookATour onClick={() => window.scrollTo({ top: 0 })} to="/contact-us">Book A Tour</BookATour>
     </Parallax>
