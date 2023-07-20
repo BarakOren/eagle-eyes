@@ -140,14 +140,7 @@ const PaperCut = styled.div`
     background-image: url(${BagePaperCut});
     z-index: 10;
     background-size: cover;
-
-    @media only screen and (max-width: 800px) {
-        width: 200%;
-    }
-
-    @media only screen and (max-width: 600px) {
-        width: 300%;
-    }
+    
 `
 
 // <ParallaxBanner
