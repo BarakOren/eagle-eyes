@@ -59,8 +59,15 @@ const TextContainer = styled.div`
     }
 
     @media only screen and (max-width: 600px) {
-        left: 59%;
+        left: 55%;
         top: 46%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    
+    @media only screen and (max-width: 420px) {
+        left: 65%;
         transform: translate(-50%, -50%);
         text-align: center;
     }
@@ -94,6 +101,10 @@ const H1 = styled.h1`
         text-shadow: 0 0 10px #000;
     -moz-text-shadow: 0 0 2px #000;
     -webkit-text-shadow: 0 0 2px #000;
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size:50px;
     }
 `
 

@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     // color: rgb(230,230,230);
     text-align: center;
     margin: 0;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     font-family: 'Work Sans', sans-serif;
   }
 
